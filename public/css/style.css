@@ -10,7 +10,6 @@ body {
 }
 
 .navbar {
-  background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
 }
@@ -27,13 +26,14 @@ body {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .card-content {
   text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card img {
