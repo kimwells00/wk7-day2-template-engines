@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EJS Template</title>
+  </head>
+  <link rel="stylesheet" href="/style.css" />
+
+  <body>
+    <div class="navbar">
+      <%- include ("../partials/nav.ejs") %>
+      <h1>Welcome to my dashboard ejs page</h1>
+    </div>
+    <div class="card-container">
+      <% userData.forEach((user) => { %>
+      <div class="card">
+        <div class="card-content">
+          <img
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="User Image"
+          />
+          <h3><%= user.name %></h3>
+          <h4><%= user.email %></h4>
+          <h4><%= user.company.name %></h4>
+          <h4><%= user.company.city %></h4>
+          <h5><%= user.skills %></h5>
+
+          <% user.projects.forEach((projects) => { %>
+          <h5><%= projects.name %></h5>
+          <% }) %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
